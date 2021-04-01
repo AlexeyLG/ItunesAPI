@@ -26,7 +26,7 @@ class TrackTableViewCell: UITableViewCell {
         return queue
     }()
     
-    //MARK: - Utilities
+    //MARK: - Utils
 
     func fill(by track: Track) {
         nameArtist.text = track.artistName

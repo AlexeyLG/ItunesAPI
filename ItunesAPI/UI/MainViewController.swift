@@ -33,15 +33,18 @@ class MainViewController: UIViewController {
 
 extension MainViewController: UISearchBarDelegate {
     
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        
-        let searchRequest = searchBar.text?.replacingOccurrences(of: " ", with: "+") ?? ""
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        let searchRequest = searchBar.text?.replacingOccurrences(of: " ", with: "+")
         
         networkManager.loadArtistInfo(name: searchRequest) { [weak self] (result) in
             guard let self = self else { return }
+            
             self.tracks = result.track
             self.tableView.reloadData()
         }
+    }
+    
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
         searchBar.resignFirstResponder()
     }
 }

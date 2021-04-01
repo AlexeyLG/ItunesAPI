@@ -16,9 +16,11 @@ class NetworkManager {
         guard let name = name else { return }
         
         let session = URLSession(configuration: .default)
+        
         guard let url = URL(string: "https://itunes.apple.com/search?term=\(name)") else { return }
         
         dataTask?.cancel()
+       
         dataTask = session.dataTask(with: url) { (data, _, error) in
             
             guard error == nil, let data = data else {
@@ -31,7 +33,7 @@ class NetworkManager {
                     completion(searchResults)
                 }
             } catch {
-                print(error)
+                print("Failed to parse", error)
             }
         }
         dataTask?.resume()
