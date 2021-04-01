@@ -9,21 +9,29 @@
 /* Begin PBXBuildFile section */
 		84566C6E2612456200221CB7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84566C6D2612456200221CB7 /* AppDelegate.swift */; };
 		84566C702612456200221CB7 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84566C6F2612456200221CB7 /* SceneDelegate.swift */; };
-		84566C722612456200221CB7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84566C712612456200221CB7 /* ViewController.swift */; };
 		84566C752612456200221CB7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84566C732612456200221CB7 /* Main.storyboard */; };
 		84566C772612456300221CB7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 84566C762612456300221CB7 /* Assets.xcassets */; };
 		84566C7A2612456300221CB7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 84566C782612456300221CB7 /* LaunchScreen.storyboard */; };
+		849FE2552612499C002DCD40 /* TrackTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FE2542612499C002DCD40 /* TrackTableViewCell.swift */; };
+		849FE258261249BA002DCD40 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FE257261249BA002DCD40 /* MainViewController.swift */; };
+		849FE25F26124DFB002DCD40 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FE25E26124DFB002DCD40 /* NetworkManager.swift */; };
+		849FE26226124E6A002DCD40 /* Track.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FE26126124E6A002DCD40 /* Track.swift */; };
+		849FE26526124E7F002DCD40 /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 849FE26426124E7F002DCD40 /* SearchResult.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		84566C6A2612456200221CB7 /* ItunesAPI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ItunesAPI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		84566C6D2612456200221CB7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		84566C6F2612456200221CB7 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		84566C712612456200221CB7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		84566C742612456200221CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		84566C762612456300221CB7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		84566C792612456300221CB7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84566C7B2612456300221CB7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		849FE2542612499C002DCD40 /* TrackTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrackTableViewCell.swift; sourceTree = "<group>"; };
+		849FE257261249BA002DCD40 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		849FE25E26124DFB002DCD40 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
+		849FE26126124E6A002DCD40 /* Track.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Track.swift; sourceTree = "<group>"; };
+		849FE26426124E7F002DCD40 /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,6 +45,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		84034B7B2614FADC005D7709 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				849FE25E26124DFB002DCD40 /* NetworkManager.swift */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
 		84566C612612456200221CB7 = {
 			isa = PBXGroup;
 			children = (
@@ -58,13 +74,33 @@
 			children = (
 				84566C6D2612456200221CB7 /* AppDelegate.swift */,
 				84566C6F2612456200221CB7 /* SceneDelegate.swift */,
-				84566C712612456200221CB7 /* ViewController.swift */,
-				84566C732612456200221CB7 /* Main.storyboard */,
+				84034B7B2614FADC005D7709 /* Manager */,
+				849FE25C26124B0C002DCD40 /* Model */,
+				849FE25A261249C8002DCD40 /* UI */,
 				84566C762612456300221CB7 /* Assets.xcassets */,
 				84566C782612456300221CB7 /* LaunchScreen.storyboard */,
 				84566C7B2612456300221CB7 /* Info.plist */,
 			);
 			path = ItunesAPI;
+			sourceTree = "<group>";
+		};
+		849FE25A261249C8002DCD40 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				849FE257261249BA002DCD40 /* MainViewController.swift */,
+				849FE2542612499C002DCD40 /* TrackTableViewCell.swift */,
+				84566C732612456200221CB7 /* Main.storyboard */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		849FE25C26124B0C002DCD40 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				849FE26126124E6A002DCD40 /* Track.swift */,
+				849FE26426124E7F002DCD40 /* SearchResult.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,9 +173,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				84566C722612456200221CB7 /* ViewController.swift in Sources */,
+				849FE26226124E6A002DCD40 /* Track.swift in Sources */,
+				849FE26526124E7F002DCD40 /* SearchResult.swift in Sources */,
 				84566C6E2612456200221CB7 /* AppDelegate.swift in Sources */,
+				849FE2552612499C002DCD40 /* TrackTableViewCell.swift in Sources */,
+				849FE25F26124DFB002DCD40 /* NetworkManager.swift in Sources */,
 				84566C702612456200221CB7 /* SceneDelegate.swift in Sources */,
+				849FE258261249BA002DCD40 /* MainViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
